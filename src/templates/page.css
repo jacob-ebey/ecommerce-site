@@ -1,0 +1,17 @@
+.Page--hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url("https://picsum.photos/id/10/1920/1080?grayscale");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.Page--hero h1 {
+  font-size: 300%;
+}

@@ -1,0 +1,75 @@
+.Header {
+  position: relative;
+  color: black;
+}
+
+.Header--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.Header--wrapper-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.Header--icons {
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.Header--icon-button > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.Header--icons svg {
+  width: 24px;
+  height: 24px;
+}
+
+.Header--title {
+  margin: 0;
+  text-align: center;
+}
+
+.Header--links {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  width: 100%;
+}
+
+@media only screen and (min-width : 440px) {
+  .Header--wrapper-content, .Header--links {
+    justify-content: center;
+  }
+}
+
+.Header--links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 80%;
+}
+
+.Header--links a:after {
+  content: "/";
+  display: inline-block;
+  font-weight: 900 !important;
+  margin: 0 10px;
+  color: black !important;
+}
+
+.Header--links a:last-child:after {
+  display: none;
+}

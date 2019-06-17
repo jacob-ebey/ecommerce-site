@@ -1,0 +1,15 @@
+.Product--carousel {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.Dropdown--item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Dropdown--item:hover {
+  background-color: #eaedef;
+}
+

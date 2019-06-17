@@ -1,0 +1,12 @@
+.Shop--product {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.Shop--product-image {
+  width: 100px !important;
+  height: 100px !important;
+  margin-right: 10px;
+  border-radius: 50%;
+}
