@@ -4,6 +4,34 @@
   min-height: 50vh;
 }
 
+.Product--price-contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Product--price-contact > span {
+  flex: 1;
+}
+
+.Product--review {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.Product--review-image {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+  height: 100px !important;
+  min-height: 100px !important;
+  max-height: 100px !important;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #eee;
+  align-self: flex-start;
+}
+
 .Dropdown--item {
   padding-left: 10px;
   padding-right: 10px;

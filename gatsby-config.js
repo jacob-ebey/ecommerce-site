@@ -5,6 +5,7 @@ module.exports = {
     author: `GrowHub`,
   },
   plugins: [
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -38,6 +39,23 @@ module.exports = {
         url: "https://api-uswest.graphcms.com/v1/cjwyin5qs125701iafarjb7g2/master",
       },
     },
+    {
+      resolve: "gatsby-source-apiserver",
+      options: {
+        auth: false,
+        name: "etsyReviews",
+        payloadKey: "results",
+        url: `https://openapi.etsy.com/v2/users/WestKoastKreations/feedback/as-subject`,
+        method: "get",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        params: {
+          api_key: process.env.ETSY_API_KEY
+        },
+        data: {}
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

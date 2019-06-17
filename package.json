@@ -8,11 +8,13 @@
     "apollo-boost": "^0.4.2",
     "gatsby": "^2.9.4",
     "gatsby-image": "^2.1.4",
+    "gatsby-plugin-catch-links": "^2.0.15",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.3",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.1.5",
     "gatsby-plugin-typography": "^2.2.13",
+    "gatsby-source-apiserver": "^2.1.2",
     "gatsby-source-filesystem": "^2.0.39",
     "gatsby-source-graphql": "^2.0.19",
     "gatsby-transformer-sharp": "^2.1.21",
@@ -32,6 +34,7 @@
     "react-markdown": "^4.0.8"
   },
   "devDependencies": {
+    "dotenv-cli": "^2.0.0",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -40,8 +43,8 @@
   "license": "MIT",
   "scripts": {
     "now-build": "npm run build",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "dotenv -- gatsby build",
+    "develop": "dotenv -- gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",

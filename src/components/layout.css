@@ -10,6 +10,10 @@ html, body, #___gatsby, #___gatsby>div[tabindex="-1"] {
   outline: 0;
 }
 
+.alice-carousel__stage img {
+  object-fit: contain !important;
+}
+
 .alice-carousel__prev-btn, .alice-carousel__next-btn {
   padding: 0 10px !important;
 }
