@@ -8,7 +8,7 @@
   },
   "builds": [
     {
-      "src": "serverless/inventory/index.js",
+      "src": "serverless/inventory.js",
       "use": "@now/node"
     },
     {
@@ -22,7 +22,7 @@
   "routes": [
     {
       "src": "^/api/inventory/graphql",
-      "dest": "serverless/inventory/index.js",
+      "dest": "serverless/inventory.js",
       "methods": ["GET", "POST"]
     }
   ]
