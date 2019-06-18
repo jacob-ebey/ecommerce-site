@@ -22,8 +22,7 @@
   "routes": [
     {
       "src": "^/api/inventory/graphql",
-      "dest": "serverless/inventory.js",
-      "methods": ["GET", "POST"]
+      "dest": "serverless/inventory.js"
     }
   ]
 }
