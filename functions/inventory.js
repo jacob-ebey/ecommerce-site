@@ -1,17 +1,17 @@
-const { ApolloServer, gql } = require('apollo-server-micro')
+const { ApolloServer, gql } = require("apollo-server")
 
 const books = [
-  { id: 1, title: 'The Trials of Brother Jero', rating: 8, authorId: 1 },
-  { id: 2, title: 'Half of a Yellow Sun', rating: 9, authorId: 3 },
-  { id: 3, title: 'Americanah', rating: 9, authorId: 3 },
-  { id: 4, title: 'King Baabu', rating: 9, authorId: 1 },
-  { id: 5, title: 'Children of Blood and Bone', rating: 8, authorId: 2 },
+  { id: 1, title: "The Trials of Brother Jero", rating: 8, authorId: 1 },
+  { id: 2, title: "Half of a Yellow Sun", rating: 9, authorId: 3 },
+  { id: 3, title: "Americanah", rating: 9, authorId: 3 },
+  { id: 4, title: "King Baabu", rating: 9, authorId: 1 },
+  { id: 5, title: "Children of Blood and Bone", rating: 8, authorId: 2 },
 ]
 
 const authors = [
-  { id: 1, firstName: 'Wole', lastName: 'Soyinka' },
-  { id: 2, firstName: 'Tomi', lastName: 'Adeyemi' },
-  { id: 3, firstName: 'Chimamanda', lastName: 'Adichie' },
+  { id: 1, firstName: "Wole", lastName: "Soyinka" },
+  { id: 2, firstName: "Tomi", lastName: "Adeyemi" },
+  { id: 3, firstName: "Chimamanda", lastName: "Adichie" },
 ]
 
 const typeDefs = gql`
@@ -74,7 +74,9 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   introspection: true,
-  playground: true,
+  playground: true
 })
 
-module.exports = server.createHandler()
+server.listen().then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`);
+})

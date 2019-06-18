@@ -8,8 +8,8 @@
   },
   "builds": [
     {
-      "src": "serverless/inventory.js",
-      "use": "@now/node"
+      "src": "functions/inventory.js",
+      "use": "@now/node-server"
     },
     {
       "src": "package.json",
@@ -21,8 +21,9 @@
   ],
   "routes": [
     {
-      "src": "^/api/inventory/*",
-      "dest": "serverless/inventory.js"
+      "src": "/api/inventory/*",
+      "dest": "functions/inventory.js",
+      "continue": true
     }
   ]
 }
