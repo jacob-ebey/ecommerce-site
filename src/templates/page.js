@@ -19,14 +19,16 @@ const PageTemplate = ({ pageContext: { page: { pageName, heroContent, pageConten
         </div>
       )}
 
-      <Grid>
-        <FlexCol>
-          <CenteredContent>
-            <br />
-            {pageContent && <Markdown source={pageContent} />}
-          </CenteredContent>
-        </FlexCol>
-      </Grid>
+      {pageContent && (
+        <Grid>
+          <FlexCol>
+            <CenteredContent>
+              <br />
+              <Markdown source={pageContent} />
+            </CenteredContent>
+          </FlexCol>
+        </Grid>
+      )}
     </Layout>
   )
 }
