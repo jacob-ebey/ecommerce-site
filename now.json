@@ -21,9 +21,8 @@
   ],
   "routes": [
     {
-      "src": "/api/inventory/*",
-      "dest": "functions/inventory.js",
-      "continue": true
+      "src": "^/api/inventory/*",
+      "dest": "functions/inventory.js"
     }
   ]
 }
