@@ -48,7 +48,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "now-build": "echo 'hello'",
+    "now-build": "npm run build",
     "build": "dotenv -- gatsby build",
     "develop": "dotenv -- gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
