@@ -29,7 +29,7 @@ const IMAGES_QUERY = gql`
 `
 
 const Cart = ({ show, onHide }) => {
-  const [cart] = useCart(items => {
+  const [cart] = useCart(({ items }) => {
     const parsedItems = items.reduce((p, { inventoryID, title, price }) => {
       const foundIndex = p.findIndex(item => item.inventoryID === inventoryID)
 

@@ -36,8 +36,6 @@ const ProductPage = ({ pageContext: { product } }) => {
 
   const etsyReviews = React.useMemo(() => allEtsyReviews.filter(r => !!r.message && !!r.message.trim()), [allEtsyReviews])
 
-  console.log(etsyReviews)
-
   const carouselItems = React.useMemo(() => product.images.map((image) => (
     <GraphImg key={image.handle} alt={image.fileName} image={image} />
   )), [product.images])

@@ -8,11 +8,21 @@
   },
   "builds": [
     {
+      "src": "serverless/inventory/index.js",
+      "use": "@now/node"
+    },
+    {
       "src": "package.json",
       "use": "@now/static-build",
       "config": {
         "distDir": "public"
       }
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/api/inventory/graphql",
+      "dest": "serverless/inventory/index.js"
     }
   ]
 }

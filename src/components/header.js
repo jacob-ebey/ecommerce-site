@@ -5,7 +5,7 @@ import { FaCartArrowDown } from "react-icons/fa"
 import { BrandButton } from "pivotal-ui/react/buttons"
 
 import useCart from "../reducers/cart"
-import Cart from "./cart";
+import Cart from "./cart"
 
 import "./header.css";
 
@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => {
   `)
 
   const [cartOpen, setCartOpen] = React.useState(false)
-  const [{ total }] = useCart(items => ({
+  const [{ total }] = useCart(({ items }) => ({
     total: items.length
   }))
   const onCartHide = React.useCallback(() => setCartOpen(false), [setCartOpen])
