@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import GraphImg from "graphcms-image"
 import { Grid, FlexCol } from "pivotal-ui/react/flex-grids"
+import { InlineList, ListItem } from "pivotal-ui/react/lists"
 
 import CenteredContent from "../components/centered-content"
 import Layout from "../components/layout"
@@ -18,6 +19,7 @@ export const GATSBY_QUERY = graphql`
         price
         overview
         categories {
+          id
           name
         }
         images(first: 1) {
@@ -38,7 +40,7 @@ const IndexPage = ({ data: { store: { products } } }) => {
       <Grid>
         <FlexCol>
           <CenteredContent>
-            {products.map(({ inventoryID, title, price, overview, images }) => (
+            {products.map(({ categories, images, inventoryID, overview, price, title }) => (
               <div className="Shop--product" key={inventoryID}>
                 {images && images.length > 0 && <GraphImg className="Shop--product-image" alt={images[0].fileName} image={images[0]} />}
                 <div>
@@ -48,6 +50,11 @@ const IndexPage = ({ data: { store: { products } } }) => {
                     <small>${price}</small>
                   </h2>
                   <p>{overview}</p>
+                  <InlineList>
+                    {categories.map((category, i) => (
+                      <ListItem key={category.id}>{category.name}</ListItem>
+                    ))}
+                  </InlineList>
                 </div>
               </div>
             ))}

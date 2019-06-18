@@ -1,3 +1,7 @@
+.Product--grid {
+  flex-direction: column-reverse;
+}
+
 .Product--carousel {
   position: relative;
   width: 100%;
@@ -11,6 +15,20 @@
 
 .Product--price-contact > span {
   flex: 1;
+}
+
+.Product--add-to-cart {
+  display: flex;
+  align-items: center;
+}
+
+.Product--add-to-cart > label {
+  margin-right: auto;
+}
+
+.Product--add-to-cart > input {
+  width: 60px !important;
+  margin-right: 10px;
 }
 
 .Product--review {
@@ -39,5 +57,11 @@
 
 .Dropdown--item:hover {
   background-color: #eaedef;
+}
+
+@media only screen and (min-width : 993px) {
+  .Product--grid {
+    flex-direction: unset;
+  }
 }
 

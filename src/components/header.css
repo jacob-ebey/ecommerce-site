@@ -1,6 +1,7 @@
 .Header {
   position: relative;
   color: black;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 
 .Header--wrapper {
@@ -18,7 +19,7 @@
 
 .Header--icons {
   position: absolute;
-  right: 10px;
+  left: 0;
   top: calc(50% - 32px);
   display: flex;
   justify-content: center;
@@ -31,6 +32,7 @@
   justify-content: center;
   align-items: center;
   font-size: 18px;
+  flex-direction: row-reverse
 }
 
 .Header--icons svg {
@@ -39,6 +41,9 @@
 }
 
 .Header--title {
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
   margin: 0;
   font-size: 26px;
 }
@@ -48,9 +53,27 @@
   flex-direction: row;
   margin-top: 10px;
   width: 100%;
+  white-space: nowrap;
 }
 
-@media only screen and (min-width : 440px) {
+@media only screen and (min-width : 310px) {
+  .Header--title {
+    width: unset;
+    content: unset;
+    overflow: unset;
+  }
+
+  .Header--icons {
+    left: unset;
+    right: 10px;
+  }
+
+  .Header--icon-button {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width : 520px) {
   .Header--title {
     text-align: center;
     font-size: 32px;

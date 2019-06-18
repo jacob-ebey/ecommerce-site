@@ -1,6 +1,11 @@
 {
   "version": 2,
   "name": "westmeercreations",
+  "build": {
+    "env": {
+      "ETSY_API_KEY": "@ecommerce-site-key"
+    }
+  },
   "builds": [
     {
       "src": "package.json",

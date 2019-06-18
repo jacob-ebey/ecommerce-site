@@ -22,6 +22,7 @@ const PageTemplate = ({ pageContext: { page: { pageName, heroContent, pageConten
       <Grid>
         <FlexCol>
           <CenteredContent>
+            <br />
             {pageContent && <Markdown source={pageContent} />}
           </CenteredContent>
         </FlexCol>

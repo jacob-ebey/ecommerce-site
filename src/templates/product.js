@@ -6,6 +6,7 @@ import GraphImg from "graphcms-image"
 import { BrandButton, DefaultButton } from "pivotal-ui/react/buttons"
 import { Dropdown } from "pivotal-ui/react/dropdowns"
 import { Grid, FlexCol } from "pivotal-ui/react/flex-grids"
+import { Input } from "pivotal-ui/react/inputs"
 import { InlineList, ListItem } from "pivotal-ui/react/lists"
 import { FaThumbsDown, FaThumbsUp } from "react-icons/fa"
 
@@ -56,7 +57,7 @@ const ProductPage = ({ pageContext: { product } }) => {
       <Layout>
         <SEO title={title} />
         <CenteredContent>
-          <Grid>
+          <Grid className="Product--grid">
             <FlexCol breakpoint="md" col={14}>
               <div>
                 <div className="Product--carousel">
@@ -81,8 +82,9 @@ const ProductPage = ({ pageContext: { product } }) => {
 
             <FlexCol>
               <div>
+                <br />
                 <h2>{title}</h2>
-                <h2 className="Product--price-contact">${price} <span /> <DefaultButton alt>Contact</DefaultButton></h2>
+                <h2 className="Product--price-contact">${price} <span /> <DefaultButton alt small>Contact</DefaultButton></h2>
 
                 <br />
 
@@ -104,7 +106,11 @@ const ProductPage = ({ pageContext: { product } }) => {
                   }
                 })}
 
-                <BrandButton onClick={addToCart(1)}>Add to cart</BrandButton>
+                <div className="Product--add-to-cart">
+                  <Input type="number" label="Quantity" value={1} />
+                  <label>Quantity</label>
+                  <BrandButton onClick={addToCart(1)}>Add to cart</BrandButton>
+                </div>
 
                 <hr />
 
@@ -120,6 +126,7 @@ const ProductPage = ({ pageContext: { product } }) => {
                         <ListItem key={category.id}>{category.name}</ListItem>
                       ))}
                     </InlineList>
+                    <hr />
                   </>
                 )}
               </div>
