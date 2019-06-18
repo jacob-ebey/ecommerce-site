@@ -21,7 +21,7 @@
   ],
   "routes": [
     {
-      "src": "^/api/inventory/graphql",
+      "src": "^/api/inventory/*",
       "dest": "serverless/inventory.js"
     }
   ]
