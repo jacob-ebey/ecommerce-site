@@ -5,6 +5,8 @@ module.exports = {
     author: `GrowHub`,
   },
   plugins: [
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
+    `gatsby-plugin-zopfli`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     {
