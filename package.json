@@ -8,7 +8,7 @@
     "apollo-server": "^2.6.3",
     "apollo-boost": "^0.4.2",
     "bufferutil": "^4.0.1",
-    "gatsby": "^2.9.4",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.1.4",
     "gatsby-plugin-catch-links": "^2.0.15",
     "gatsby-plugin-manifest": "^2.1.1",
